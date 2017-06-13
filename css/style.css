@@ -1,0 +1,576 @@
+.container {
+    color: #333;
+    font-family: Open-Sans, sans-serif;
+    font-weight: 300;
+    display: flex;
+    width: 1024px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.content {
+    width: 640px;
+    transition: all 0.5s;
+}
+
+.bot-panel-open .content {
+    width: 540px;
+}
+
+.content h1 {
+    width: 360px;
+    font-size: 42px;
+    margin: 28px 0 15px;
+    font-weight: 300;
+}
+
+.subtitle {
+    margin: 0 0 40px;
+    font-size: 12px;
+}
+
+/* Lease Card */
+
+.lease-card {
+    width: 400px;
+    border: 1px solid #dcdcdc;
+    box-shadow: 1px 1px 3px #CCC;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.lease-card:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 10px #CCC;
+}
+
+.lease-card .dealer {
+    float: right;
+    margin: 15px 15px 0 0;
+    font-size: 12px;
+}
+
+.lease-card .dealer img {
+    vertical-align: top;
+}
+
+.lease-card .selector {
+    float: left;
+    width: 60px;
+    padding-top: 40px;
+    min-height: 120px;
+    text-align: center;
+}
+
+.lease-card .selector input {
+    height: 10px;
+    width: 10px;
+}
+
+.lease-card > .title {
+    padding: 15px 0 10px;
+    font-size: 12px;
+}
+
+.lease-card .price {
+    display: flex;
+}
+
+.lease-card .price .value {
+    font-size: 46px;
+    line-height: 46px;
+}
+
+.lease-card .price .value:after {
+    content: "";
+    display: inline-block;
+    border-right: 1px solid #333;
+    height: 38px;
+    margin: 0 20px;
+    top: 3px;
+    position: relative;
+}
+
+.lease-card .price  .time-period {
+    line-height: 46px;
+}
+
+.lease-card .price  .time-period span {
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+.lease-card .lease-details {
+    margin: 10px 0;
+    display: flex;
+}
+
+.lease-card .lease-details .down-payment,
+.lease-card .lease-details .residual-amount {
+    width: 33%;
+    
+}
+
+.lease-card .lease-details .miles-year {
+    margin-left: 7%;
+}
+
+.lease-card .lease-details .title {
+    font-size: 11px;
+}
+
+.lease-card .lease-details .value {
+    margin: 2px 0;
+}
+
+.lease-card .lease-details .payment-mark {
+    font-size: 10px;
+    color: #8cd33f;
+}
+
+.lease-card.most-popular:after {
+    content: "Most popular";
+    display: block;
+    position: absolute;
+    background: #007ee5;
+    padding: 3px 20px;
+    font-size: 10px;
+    color: white;
+    right: 0;
+    bottom: 0;
+}
+
+.term {
+    position: relative;
+    padding: 1px 3px;
+    margin-left: -3px;
+}
+
+.highlight-terms .term:hover {
+    background-color: #8ccf2b;
+    color: white;
+}
+
+.term::before {
+    content: '';
+    top: 0;
+    left: 0;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    width: 0;
+    height: 0;
+    box-sizing: inherit;
+    position: absolute;
+    margin-top: -1px;
+}
+
+.term::after {
+    content: '';
+    bottom: 0;
+    right: 0;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    width: 0;
+    height: 0%;
+    box-sizing: inherit;
+    position: absolute;
+}
+
+.highlight-terms .term::before {
+    border-top-color: #8ccf2b;
+    border-right-color: #8ccf2b;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+    width: 100%;
+    height: 100%;
+}
+
+.highlight-terms .term::after {
+    border-bottom-color: #8ccf2b;
+    border-left-color: #8ccf2b;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+    width: 100%;
+    height: 100%;
+}
+
+.term .tooltip {
+    display: none;
+}
+
+.highlight-terms .term .tooltip {
+    display: block;
+    position: absolute;
+    color: #333;
+    background: #fff;
+    border: 1px solid gray;
+    padding: 8px;
+    z-index: 3;
+    width: 200px;
+    margin-left: -4px;
+    font-size: 12px;
+}
+
+.highlight-terms .right-column .term .tooltip {
+    right: 0;
+    text-align: left;
+    margin-top: -1px;
+}
+
+.tooltip .tooltip-link {
+    color: #007ee5;
+    margin: 0 10px;
+}
+
+/* Right column */
+
+.right-column h2 {
+    font-size: 18px;
+    margin: 28px 0 10px;
+    font-weight: 300;
+}
+
+
+/* Vehicle card */
+
+.vehicle {
+    text-align: right;
+    width: 330px;
+    font-size: 12px;
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.vehicle .photo {
+    float: left;
+}
+
+.vehicle .name {
+    margin-bottom: 10px;
+}
+
+.vehicle .msrp,
+.vehicle .savings,
+.vehicle .total {
+    display: flex;
+    justify-content: flex-end;
+    line-height: 18px;
+}
+
+.vehicle .value {
+    width: 70px;
+}
+
+.vehicle .total .value {
+    font-size: 16px;
+}
+
+/* Payment block */
+
+.payment {
+    display: flex;
+    background: #f2f9e3;
+    padding: 10px 40px;
+    margin-bottom: 10px;
+}
+
+.payment .monthly-payment {
+    font-size: 10px;
+}
+
+.payment .monthly-payment-value {
+    font-size: 42px;
+    line-height: 42px;
+    margin-left: 5px;
+    color: #8ccb02;
+    vertical-align: middle;
+}
+
+.payment .period {
+    float: right;
+    margin-right: 10px;
+}
+
+/* Vehicle Details */
+
+.vehicle-details {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.vehicle-details .value {
+    margin-bottom: 10px;    
+}
+
+.vehicle-details .label {
+    font-size: 11px;
+}
+
+.vehicle-details .mileage {
+    margin: 15px 0;
+}
+
+.options .show-more {
+    font-size: 12px;
+    margin-left: 15px;
+    color: #3aaed9;
+    text-decoration: none;
+}
+
+
+/* buttons */
+
+.continue,
+.send-message {
+    margin-top: 20px;
+    background: #8ccb00;
+    color: white;
+    border-width: 0;
+    font-size: 16px;
+    padding: 9px 30px;
+    border-radius: 3px;
+}
+
+.send-message {
+    padding: 9px 12px;
+}
+
+.continue:hover,
+.send-message:hover,
+.bot-button:hover {
+    cursor: pointer;
+    background: #70a201;
+}
+
+.bot-button {
+    background: #8ccb00;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    line-height: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Bot panel */
+
+.bot-panel {
+    position: fixed;
+    top: 0;
+    right: -320px;
+    height: 100%;
+    width: 320px;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column-reverse;
+    transition: right 0.5s;
+    font-family: Open-Sans, sans-serif;
+    color: #777777;
+    box-shadow: 0 0 20px rgba(0,0,0,.5);
+}
+
+.bot-panel-open .bot-panel {
+    right: 0;
+}
+
+.bot-panel .input-panel .send-message {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.bot-panel .input-panel .message-area {
+    width: 252px;
+    margin-left: 8px;
+    vertical-align: bottom;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    height: 28px;
+    padding: 3px;
+    font-size: 12px;
+    margin-bottom: 8px;
+    resize: none;
+}
+
+.bot-panel .messages {
+    overflow: auto;
+}
+
+.bot-panel .message {
+    margin: 8px 8px 24px;
+    padding: 8px;
+    background: white;
+    border-radius: 3px;
+    font-size: 12px;
+    position: relative;
+}
+
+.bot-panel .message:after {
+    content: '';
+    position: absolute;
+    left: 8px;
+    bottom: -17px;
+    border: 10px solid transparent;
+    border-top: 16px solid white;
+    transform: rotate(40deg);
+    z-index: -1;
+}
+
+.bot-panel .message.bot-message:after {
+    left: 278px;
+    bottom: -5px;
+    border: 8px solid transparent;
+    border-top: 9px solid white;
+    transform: rotate(208deg);
+    z-index: -1;
+}
+
+.bot-panel .message .title {
+    font-family: TeXGyreAdventor, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.bot-panel .message .normal-title {
+    font-family: TeXGyreAdventor, sans-serif;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.bot-panel .message .term-link {
+    color: #8cd33f;
+}
+
+.bot-panel .message .term-link + .term-link {
+    color: #007ee5;
+}
+
+.bot-panel .close-panel {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 17px;
+    width: 20px;
+    border-radius: 10px;
+    background: #E6E6E5;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 3px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Graphic */
+.graphic {
+    height: 140px;
+    width: 120px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.c100 {
+    position: relative;
+    font-size: 120px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    float: left;
+    margin: 0 0.1em 0.1em 0;
+    background-color: #8cd136;
+}
+
+.c100 * {
+    box-sizing: content-box;
+}
+
+.c100 > span {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 5em;
+    line-height: 5em;
+    font-size: 0.2em;
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    font-weight: 100;
+}
+
+.c100 .bar {
+    position: absolute;
+    border: 0.08em solid #0874e3;
+    width: 0.84em;
+    height: 0.84em;
+    clip: rect(0em, 0.5em, 1em, 0em);
+    border-radius: 50%;
+    transform: rotate(0deg);
+}
+
+.c100 .bar2 {
+    position: absolute;
+    border: 0.08em solid #ccd2d7;
+    width: 0.84em;
+    height: 0.84em;
+    clip: rect(0em, 0.5em, 1em, 0em);
+    border-radius: 50%;
+    transform: rotate(30deg);
+}
+
+.c100:after {
+    position: absolute;
+    top: 0.08em;
+    left: 0.08em;
+    display: block;
+    content: " ";
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    width: 0.84em;
+    height: 0.84em;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.c100 .slice {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    clip: rect(0em, 1em, 1em, 0.5em);
+}
+
+.c100.p12 .bar {
+    transform: rotate(75deg);
+}
+
+.formula-values {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+.formula-values span {
+    position: relative;
+}
+
+.formula-values .term-link {
+    position: absolute;
+    margin-top: 14px;
+    font-size: 10px;
+    left: 24%;
+}
+
+.formula-values span:nth-child(2) .term-link {
+    left: 11%;
+    color: #007ee5;
+}
+
+.formula-values span:nth-child(3) .term-link {
+    color: #ccd2d7;
+}
